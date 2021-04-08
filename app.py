@@ -9,7 +9,7 @@ api = Api(app)
 
 @app.route("/")
 def hello():
-    return "Property API"
+    return "<h1>Property Testing</h1><br><h3>/properties</h3><br><h3>/properties/{record}</h3>"
 
 @app.route('/properties/<record>', methods=['GET'])
 def get_records(record):
@@ -30,5 +30,5 @@ class properties(Resource):
 api.add_resource(properties, '/properties')
 
 if __name__ == "__main__": 
-    app.run()
+    app.run() 
  
